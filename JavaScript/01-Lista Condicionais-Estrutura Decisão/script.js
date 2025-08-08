@@ -33,6 +33,7 @@ if (num % 3 == 0 && num % 5 == 0) {
 }
 */
 
+
 /* // Exercicio 2 - Verificar qual numero é maior
 console.log("Exercicio 2")
 let num1 = Number(prompt(
@@ -59,6 +60,7 @@ if (num1 > num2 && num1 > num3) {
   alert("Há dois ou mais números iguais e maiores.");
 }
 */
+
 
 /* // Exercicio 3 - Irá Classificar conforne a idade
 console.log("Exercicio 3");
@@ -93,6 +95,7 @@ else if (idade <= 2) {
 }
 */
 
+
 /* // Exercicio 4 - Conversão entre Celsius e Fahrenheit.
 console.log("Exercício 4");
 
@@ -122,7 +125,8 @@ if (escolha === "1") {
 }
 */
 
-// Exercicio 5 - Verificar multa por velocidade
+
+/* // Exercicio 5 - Verificar multa por velocidade
 console.log("Exercício 5");
 
 let velocidade = Number(prompt(
@@ -143,7 +147,7 @@ if (velocidade <= limite) {
   console.log(`Valor da multa: R$ ${multa.toFixed(2)}`);
   alert(`Você foi multado por exceder ${excesso} km/h.\nValor da multa: R$ ${multa.toFixed(2)}`);
 }
-
+*/
 
 
 /* // Exercicio 7  da lista - Calcula a idade e informa se a pessoa pode votar.
@@ -173,6 +177,7 @@ if (idade < 16) {
 }
 */
 
+
 /* // Exercicio 8 da lista - Verificar ano bissexto
 console.log("Exercício 7");
 
@@ -189,6 +194,7 @@ if ((ano % 400 === 0) || (ano % 4 === 0 && ano % 100 !== 0)) {
   alert(`O ano ${ano} não é bissexto.`);
 }
 */
+
 
 /* // Exercicio 9 da lista - Alistamento Militar
 console.log("Exercício 8");
