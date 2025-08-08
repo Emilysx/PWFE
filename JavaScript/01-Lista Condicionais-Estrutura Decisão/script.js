@@ -93,7 +93,7 @@ else if (idade <= 2) {
 }
 */
 
- // Exercicio 4 - Conversão entre Celsius e Fahrenheit.
+/* // Exercicio 4 - Conversão entre Celsius e Fahrenheit.
 console.log("Exercício 4");
 
 let escolha = prompt(
@@ -120,7 +120,32 @@ if (escolha === "1") {
   console.log("Opção inválida!");
   alert("Opção inválida!");
 }
+*/
 
+// Exercicio 7 - Calcula a idade e informa se a pessoa pode votar.
+console.log("Exercício 5");
 
+let anoNascimento = Number(prompt(
+    "Esse programa vai pedir seu ano de nascimento, calcular sua idade e informar se você pode votar.\n" +
+    "Digite o seu ano de nascimento:"));
+let anoAtual = Number(prompt("Digite o ano atual:"));
+
+let idade = anoAtual - anoNascimento;
+
+console.log(`Você tem ${idade} anos.`);
+alert(`Você tem ${idade} anos.`)
+
+if (idade < 16) {
+  console.log("Você ainda não pode votar.");
+  alert("Você ainda não pode votar.");
+
+} else if ((idade >= 16 && idade < 18) || idade > 70) {
+  console.log("O voto é opcional.");
+  alert("O voto é opcional.");
+
+} else {
+  console.log("O voto é obrigatório.");
+  alert("O voto é obrigatório.");
+}
 
 
