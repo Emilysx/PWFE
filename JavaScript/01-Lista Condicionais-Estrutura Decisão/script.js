@@ -122,8 +122,32 @@ if (escolha === "1") {
 }
 */
 
-/* // Exercicio 7  da lista - Calcula a idade e informa se a pessoa pode votar.
+// Exercicio 5 - Verificar multa por velocidade
 console.log("Exercício 5");
+
+let velocidade = Number(prompt(
+    "Esse programa vai verificar a velocidade do carro!\n" +
+    "Informe a velocidade do carro (km/h):"
+));
+const limite = 80;
+
+if (velocidade <= limite) {
+  console.log("Você está dentro do limite de velocidade. Boa viagem!");
+  alert("Você está dentro do limite de velocidade. \nBoa viagem!");
+
+} else {
+  let excesso = velocidade - limite;
+  let multa = excesso * 5;
+
+  console.log(`Você foi multado por exceder ${excesso} km/h.`);
+  console.log(`Valor da multa: R$ ${multa.toFixed(2)}`);
+  alert(`Você foi multado por exceder ${excesso} km/h.\nValor da multa: R$ ${multa.toFixed(2)}`);
+}
+
+
+
+/* // Exercicio 7  da lista - Calcula a idade e informa se a pessoa pode votar.
+console.log("Exercício 6");
 
 let anoNascimento = Number(prompt(
     "Esse programa vai pedir seu ano de nascimento, calcular sua idade e informar se você pode votar.\n" +
@@ -150,7 +174,7 @@ if (idade < 16) {
 */
 
 /* // Exercicio 8 da lista - Verificar ano bissexto
-console.log("Exercício 6");
+console.log("Exercício 7");
 
 let ano = Number(prompt(
     "Esse programa vai verificar se o ana é bissexto!\n" +
@@ -166,8 +190,8 @@ if ((ano % 400 === 0) || (ano % 4 === 0 && ano % 100 !== 0)) {
 }
 */
 
-// Exercicio 9 da lista - Alistamento Militar
-console.log("Exercício 7");
+/* // Exercicio 9 da lista - Alistamento Militar
+console.log("Exercício 8");
 
 let anoNascimento = Number(prompt(
     "Esse programa vai verificar o tempo do alistamento militar\n" + 
@@ -191,5 +215,8 @@ if (idade < 18) {
   console.log(`Você tem ${idade} anos. Já se passaram ${anosPassados} anos do alistamento.`);
   alert(`Você tem ${idade} anos.\nJá se passaram ${anosPassados} anos do alistamento.`);
 }
+*/
+
+// Exercicio 
 
 
