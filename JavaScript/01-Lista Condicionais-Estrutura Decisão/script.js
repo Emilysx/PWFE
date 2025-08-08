@@ -149,7 +149,7 @@ if (idade < 16) {
 }
 */
 
-// Exercicio 8 da lista - Verificar ano bissexto
+/* // Exercicio 8 da lista - Verificar ano bissexto
 console.log("Exercício 6");
 
 let ano = Number(prompt(
@@ -164,4 +164,32 @@ if ((ano % 400 === 0) || (ano % 4 === 0 && ano % 100 !== 0)) {
   console.log(`O ano ${ano} não é bissexto.`);
   alert(`O ano ${ano} não é bissexto.`);
 }
+*/
+
+// Exercicio 9 da lista - Alistamento Militar
+console.log("Exercício 7");
+
+let anoNascimento = Number(prompt(
+    "Esse programa vai verificar o tempo do alistamento militar\n" + 
+    "Insira o ano do seu nascimento:"
+));
+let anoAtual = Number(prompt("Insira o ano atual:"));
+
+let idade = anoAtual - anoNascimento;
+let anosParaAlistar = 18 - idade;
+
+if (idade < 18) {
+  console.log(`Você tem ${idade} anos. Faltam ${anosParaAlistar} anos para o alistamento.`);
+  alert(`Você tem ${idade} anos.\nFaltam ${anosParaAlistar} anos para o alistamento.`);
+
+} else if (idade === 18) {
+  console.log("Você tem 18 anos. Está na hora de se alistar!");
+  alert("Você tem 18 anos. Está na hora de se alistar!");
+
+} else {
+  let anosPassados = idade - 18;
+  console.log(`Você tem ${idade} anos. Já se passaram ${anosPassados} anos do alistamento.`);
+  alert(`Você tem ${idade} anos.\nJá se passaram ${anosPassados} anos do alistamento.`);
+}
+
 
