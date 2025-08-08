@@ -122,7 +122,7 @@ if (escolha === "1") {
 }
 */
 
-// Exercicio 7 - Calcula a idade e informa se a pessoa pode votar.
+/* // Exercicio 7  da lista - Calcula a idade e informa se a pessoa pode votar.
 console.log("Exercício 5");
 
 let anoNascimento = Number(prompt(
@@ -147,5 +147,21 @@ if (idade < 16) {
   console.log("O voto é obrigatório.");
   alert("O voto é obrigatório.");
 }
+*/
 
+// Exercicio 8 da lista - Verificar ano bissexto
+console.log("Exercício 6");
+
+let ano = Number(prompt(
+    "Esse programa vai verificar se o ana é bissexto!\n" +
+    "Informe um ano para verificar se é bissexto:"
+));
+
+if ((ano % 400 === 0) || (ano % 4 === 0 && ano % 100 !== 0)) {
+  console.log(`O ano ${ano} é bissexto.`);
+  alert(`O ano ${ano} é bissexto.`);
+} else {
+  console.log(`O ano ${ano} não é bissexto.`);
+  alert(`O ano ${ano} não é bissexto.`);
+}
 
