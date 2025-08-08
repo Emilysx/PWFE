@@ -2,8 +2,8 @@
 console.log("Exercício 1")
 
 let num = Number(prompt(
-    "Esse programa vai dizer se o número é impar ou par, múltiplo de 3 e 5!" +
-    "\nInsira um número: "
+    "Esse programa vai dizer se o número é impar ou par, múltiplo de 3 e 5!\n" +
+    "Insira um número: "
 ));
 
 if (num % 2 == 0) {
@@ -36,8 +36,8 @@ if (num % 3 == 0 && num % 5 == 0) {
 /* // Exercicio 2 - Verificar qual numero é maior
 console.log("Exercicio 2")
 let num1 = Number(prompt(
-    "Esse programa vai mostrar qual número é o maior!" +
-    "\nInsira o primeiro número: "
+    "Esse programa vai mostrar qual número é o maior!\n" +
+    "Insira o primeiro número: "
 ));
 let num2 = Number(prompt("Insira o segundo número: "));
 let num3 = Number(prompt("Insira o terceiro e último número: "));
@@ -61,10 +61,10 @@ if (num1 > num2 && num1 > num3) {
 */
 
 /* // Exercicio 3 - Irá Classificar conforne a idade
-console.log("Exercicio 3")
+console.log("Exercicio 3");
 let idade = Number(prompt(
-    "Esse prograama vai fazer a classificação conforme a idade!" +
-    "\nInforme sua idade: "
+    "Esse prograama vai fazer a classificação conforme a idade!\n" +
+    "Informe sua idade: "
 ));
 
 if (idade <= 0) {
@@ -92,6 +92,35 @@ else if (idade <= 2) {
     alert("Classificação: Idoso");
 }
 */
+
+ // Exercicio 4 - Conversão entre Celsius e Fahrenheit.
+console.log("Exercício 4");
+
+let escolha = prompt(
+  "Escolha uma opção de conversão:\n" +
+  "1 - Celsius para Fahrenheit\n" +
+  "2 - Fahrenheit para Celsius"
+);
+
+if (escolha === "1") {
+  let celsius = Number(prompt("Informe a temperatura em Celsius:"));
+  let fahrenheit = (celsius * 9/5) + 32;
+
+  console.log(`${celsius}°C equivalem a ${fahrenheit.toFixed(2)}°F`);
+  alert(`${celsius}°C equivalem a ${fahrenheit.toFixed(2)}°F`);
+
+} else if (escolha === "2") {
+  let fahrenheit = Number(prompt("Digite a temperatura em Fahrenheit:"));
+  let celsius = (fahrenheit - 32) * 5/9;
+
+  console.log(`${fahrenheit}°F equivalem a ${celsius.toFixed(2)}°C`);
+  alert(`${fahrenheit}°F equivalem a ${celsius.toFixed(2)}°C`);
+
+} else {
+  console.log("Opção inválida!");
+  alert("Opção inválida!");
+}
+
 
 
 
