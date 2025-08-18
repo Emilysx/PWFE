@@ -1,31 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <!-- Declaração do Javascript -->
-    <script src="./script.js" defer></script>
-    <title> JavaScript </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Bingo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <section>
-        <header>
-            <h1>Aula 03 - Prática, Teoria e Desafio </h1>
-        </header>
-        <button> Olá </button>
-    </section>
+    <header class="CabecalhoJogo">
+        <h1 class="TituloJogo"> BINGO </h1> 
+        <p class="SubtituloJogo"> Marque os números sorteados na sua cartela!</p>
+    </header>
 
-    <address>
-        <p> Criando por <a href="#"> Emily Gabrielle </a> </p>
+    <main class="ConteudoPrincipal">
+        <section class="SecaoSorteio">
+            <div class="AreaNumeroSorteado">
+                <h2 class="TituloNumero">Número Sorteado</h2>
+                <div class="NumeroAtual" id="NumeroAtual">
+                    <span class="TextoAguardando">Clique em "Sortear"</span>
+                </div>
+            </div>
+            
+            <div class="BotoesControle">
+                <button class="BotaoSortear" id="BotaoSortear">Sortear Número</button>
+                <button class="BotaoReiniciar" id="BotaoReiniciar">Novo Jogo</button>
+            </div>
+        </section>
 
-        <p>Você conegue me ajudar a fazer um bingo, basico em html, css e JavaScript. usando html semantico, então, sem usar muitas divs
-            e todos as tegs que não fechamando colocar uma " /" para simbolizar o fechamento delas, além disso, todos os nome de id, class tem que começar 
-            com letra maiuscula, ex: "ConteudoPrincipal". Lembrando que tem que ser 100% semantico.
-            Na parte do JavaScript tem que usar os conceitos mais basicos, vou te mandar o que a professora já ensinou para vc analizar:
-        </p>
-    </address>
+        <section class="SecaoCartela">
+            <h2 class="TituloCartela">Sua Cartela</h2>
+            <table class="CartelaBingo" id="CartelaBingo">
+                <thead class="CabecalhoCartela">
+                    <tr class="LinhaLetras">
+                        <th class="LetraB">B</th>
+                        <th class="LetraI">I</th>
+                        <th class="LetraN">N</th>
+                        <th class="LetraG">G</th>
+                        <th class="LetraO">O</th>
+                    </tr>
+                </thead>
+                <tbody class="CorpoCartela" id="CorpoCartela">
+                    <!-- Os números serão gerados via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="SecaoHistorico">
+            <h2 class="TituloHistorico">Números Sorteados</h2>
+            <div class="HistoricoNumeros" id="HistoricoNumeros">
+                <p class="TextoVazio">Nenhum número foi sorteado ainda</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="RodapeJogo">
+        <p class="TextoRodape">Boa sorte!</p>
+        <p class="TextoRodape">Criado por Emily Gabrielle <3</p>
+    </footer>
 
 </body>
-
 </html>
