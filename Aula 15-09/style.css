@@ -1,0 +1,17 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.cor{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 2px 0;;
+}
+.quadrado{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+}
+article{
+    font-size: 10pt;
+}
