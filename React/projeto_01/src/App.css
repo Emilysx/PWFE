@@ -1,42 +1,112 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+}
+/* Paleta de cores */
+:root {
+  --rosa-claro: #ffe6f0;
+  --rosa-medio: #ffb6c1;
+  --rosa-forte: #eb5c7d;
+  --verde-claro: #d4f7d4;
+  --verde-escuro: #47a747;
+  --texto: #4a2c2a;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--rosa-claro), #fff);
+  color: var(--texto);
+}
+
+
+/* Container principal */
+.app {
+  max-width: 900px;
+  margin: 0 auto;        
+  padding: 16px;
   text-align: center;
+  display: flex;          
+  flex-direction: column;
+  align-items: center;  
+  min-height: 100vh; 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.app h1 {
+  color: var(--rosa-forte);
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 3px var(--sombra);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Bloco do perfil */
+.perfil-principal {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  align-items: start;
+  background: #fff;
+  border: 3px solid var(--rosa-medio);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px var(--sombra);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Foto */
+.foto img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid var(--rosa-forte);
+
 }
 
-.card {
-  padding: 2em;
+.foto figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--rosa-forte);
+  font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+.foto img{
+  margin-bottom: 50px;
+}
+/* Perfil*/
+.pefil {
+  text-align: left;
+}
+
+.pefil h2 {
+  color: var(--rosa-forte);
+  margin-bottom: 10px;
+  border-bottom: 2px dashed var(--rosa-medio);
+  padding-bottom: 4px;
+}
+
+.pefil h3 {
+  margin-top: 16px;
+  color: var(--verde-escuro);
+  
+}
+
+.pefil ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+
+.pefil li {
+  margin-bottom: 6px;
+  background: var(--rosa-claro);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* Texto */
+.pefil p {
+  background: var(--verde-claro);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 6px var(--sombra);
 }
