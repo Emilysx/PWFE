@@ -1,0 +1,70 @@
+/* Fundo geral */
+body {
+  background: #8e72dd;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Container do tabuleiro */
+.containerTabuleiro {
+  text-align: center;
+  background: rgba(242, 230, 255, 0.758);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+/* Títulos */
+.containerTabuleiro h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.containerTabuleiro h2 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Cada linha */
+.linha {
+  display: flex;
+  justify-content: center;
+}
+
+/* Cada quadrado */
+.quadrado {
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Efeito hover */
+.quadrado:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Diferencia X e O */
+.quadrado:has(> :is(span, div, p):contains("X")),
+.quadrado[value="X"] {
+  color: #d32f2f;
+}
+
+.quadrado:has(> :is(span, div, p):contains("O")),
+.quadrado[value="O"] {
+  color: #1976d2;
+}
