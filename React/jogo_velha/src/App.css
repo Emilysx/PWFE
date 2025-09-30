@@ -13,7 +13,7 @@ body {
 .containerTabuleiro {
   text-align: center;
   background: rgba(242, 230, 255, 0.758);
-  padding: 40px;
+  padding: 50px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: fit-content;
@@ -58,13 +58,38 @@ body {
   transform: scale(1.05);
 }
 
-/* Diferencia X e O */
-.quadrado:has(> :is(span, div, p):contains("X")),
-.quadrado[value="X"] {
-  color: #d32f2f;
+.icone {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
-.quadrado:has(> :is(span, div, p):contains("O")),
-.quadrado[value="O"] {
-  color: #1976d2;
+.reiniciarJogo {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.btn-reiniciar {
+  background: #8625a1;
+  color: #ffffff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-reiniciar:hover {
+  background: #3d095a;
+}
+
+.rodape {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
