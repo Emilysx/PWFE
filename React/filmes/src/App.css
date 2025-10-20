@@ -1,0 +1,29 @@
+:root {
+  --cor-primaria: rgba(203, 54, 138, 1);
+  --cor-secundaria: rgba(121, 42, 87, 1); 
+  --cor-fundo: rgb(237, 230, 230);
+  --cor-texto-escuro: #333;
+
+  --branco: rgba(255, 255, 255, 1);
+  --preto: rgba(0, 0, 0, 1);
+  --cinza: rgb(154, 154, 154);
+}
+
+.App {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--cor-fundo);
+}  
+
+header h1{
+  margin-bottom: 30px;
+  color: var(--cor-primaria);
+}
+
+.filme-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
