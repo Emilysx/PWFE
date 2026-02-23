@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+:root{
+	--bg:#f4eff5;
+	--bg2:#e9deeb;
+
+	--primary:#d752cf;
+	--secundary:#ba72db;
+	--accent:#8e71da;
+	--white: #fff;
+	--black: #000;
+
+	--text: #000;
+	--border: #54319b;
+
+	--focus: #3a6af1;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+	margin: 0;
+	color: var(--text);
+	background: var(--bg);
+}
+
+h1, h2, h3{
+	font-family: "DynaPuff", system-ui;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-variation-settings:"wdth" 100;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+
+}
+
+a:focus-visible,
+button:focus-visible{
+	outline: 3px solid var(--focus);
+	outline-offset: 3px;
+	border-radius: 10px;
+}
+
+.container{
+	width: min(1100px, 90%);
+	margin: 0 auto;
+}
