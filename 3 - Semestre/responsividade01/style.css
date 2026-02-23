@@ -1,0 +1,32 @@
+:root{
+	--bg: #fba1e4;
+}
+
+.caixinha{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background: var(--bg);
+	width: 80%;
+	min-height: 20vh;  /* 20% do tamanho da view */
+	padding: 2rem;  /* rem = 16px  2x26 = 32px */
+}
+
+section{
+	width: 100vw;
+	/* 100% da view */
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+@media (max-width: 600px){
+	.caixinha{
+		background: aqua;
+		padding: 1rem;  /*  agora tem 16 px */
+	}
+}
