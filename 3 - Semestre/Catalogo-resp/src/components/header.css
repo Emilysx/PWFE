@@ -75,3 +75,33 @@
 	transform:  translateY(0);
 	
 }
+
+.nav a{
+	text-decoration: none;
+	color: var(--border);
+	padding: 10px;
+	font-size: medium;
+
+}
+
+.nav a:hover{
+	background-color: var(--primary);
+}
+
+@media(min-width: 1024px){
+	.sanduiche{
+		display: none;
+	}
+	.nav{
+		position: static;
+		display: flex;
+		gap: 1rem;
+		padding: 0;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transform: none;
+		background: transparent;
+		border: 0;
+	}
+}

@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-// import "./features.css"
+import "./features.css"
 
 export default function Features() {
     

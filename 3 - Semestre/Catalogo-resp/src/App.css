@@ -4,6 +4,8 @@
 :root{
 	--bg:#f4eff5;
 	--bg2:#e9deeb;
+	--bg3: #d5a8de;
+	--bg4: #ebc7f2;
 
 	--primary:#d752cf;
 	--secundary:#ba72db;
@@ -12,9 +14,12 @@
 	--black: #000;
 
 	--text: #000;
+	--text-cinza:#505050;
 	--border: #54319b;
 
 	--focus: #3a6af1;
+	--shadow: 0 10px 30px #4d148bc6;
+	--shadow2: 0 0.6px 8px #4d148bc6;
 }
 
 body {
