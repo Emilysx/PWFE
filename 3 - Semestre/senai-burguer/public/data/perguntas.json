@@ -1,0 +1,44 @@
+[
+  {
+    "id": "q1",
+    "titulo": "Pergunta 1",
+    "prompt": "Qual é o nome do restaurante onde o Bob Esponja trabalha?",
+    "resposta": [
+      "Siri Cascudo",
+      "Balde de Lixo",
+      "Restaurante do Lula Molusco",
+      "Fundo do Mar"
+    ],
+    "correta": "Siri Cascudo",
+    "dica": "É o restaurante do Seu Sirigueijo ",
+    "icon": ""
+  },
+  {
+    "id": "q2",
+    "titulo": "Pergunta 2",
+    "prompt": "Quem é o melhor amigo do Bob Esponja?",
+    "resposta": [
+      "Lula Molusco",
+      "Patrick",
+      "Seu Sirigueijo",
+      "Sandy"
+    ],
+    "correta": "Patrick",
+    "dica": "Ele é uma estrela-do-mar",
+    "icon": ""
+  },
+  {
+    "id": "q3",
+    "titulo": "Pergunta 3",
+    "prompt": "Qual instrumento o Lula Molusco gosta de tocar?",
+    "resposta": [
+      "Guitarra",
+      "Piano",
+      "Clarinete",
+      "Bateria"
+    ],
+    "correta": "Clarinete",
+    "dica": "É um instrumento de sopro ",
+    "icon": ""
+  }
+]

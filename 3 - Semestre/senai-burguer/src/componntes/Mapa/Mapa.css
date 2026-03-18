@@ -1,11 +1,65 @@
-.mapa{
+.mapa {
 	max-width: 720;
 	margin: 1rem;
 	padding: 12px;
 }
 
-.mapaContainer{
+.mapaContainer {
 	width: 100%;
 	height: 320px;
 	overflow: hidden;
+}
+
+.painel {
+	background-color: rgb(228, 251, 255);
+	border: 1px rgb(212, 230, 245) solid;
+	border-radius: 10px;
+	padding: 1rem;
+	margin-bottom: 12px;
+}
+
+.painel-topo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 6px;
+}
+
+.vazio {
+	color: rgb(0, 11, 59);
+}
+
+.botao {
+	background: rgb(255, 255, 10);
+	color: rgb(0, 0, 0);
+	border: 0;
+	border-radius: 8px;
+	padding: 6px, 10px;
+	cursor: pointer;
+}
+
+.botao:hover {
+	background: rgb(240, 240, 153);
+	text-decoration: underline;
+}
+
+.lista-pontinhos {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.pontinhos {
+	display: grid;
+	grid-template-columns: 48px 1fr 130px;
+	gap: 10px;
+	align-items: center;
+	padding: 6px 0;
+	border-top: gray 1px dashed;
+}
+
+.dist{
+    text-align: right;
+    color: #112cc2;
+    font-weight: bolder;
 }

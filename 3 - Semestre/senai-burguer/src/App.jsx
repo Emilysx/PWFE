@@ -4,10 +4,12 @@ import viteLogo from '/vite.svg'
 
 // import './App.css'
 import Mapa from "./componntes/Mapa/Mapa.jsx"
+import Fases from './pages/Fases.jsx'
 
 function App() {
   return(
-    <Mapa />
+    // <Mapa />
+    <Fases />
   )
   
 }
