@@ -66,7 +66,7 @@ export default function CaixaQuestoes({ question, index, total, onClose, onCorre
  
                     <button ref={closeBtnRef} type="button" className="btnFecha" aria-label={`Fechar pergunta: ${question.titulo}`} onClick={onClose}></button>
                 </header>
-            </div>
+            
  
             <div className="dialog-card">
                 <p className="question-prompt">{question.prompt}</p>
@@ -120,7 +120,8 @@ export default function CaixaQuestoes({ question, index, total, onClose, onCorre
                 </form>
  
                 {question.dica && <p className="question-hint"> Dica: {question.dica}</p>}
- 
+            
+            </div>
             </div>
         </>
     )

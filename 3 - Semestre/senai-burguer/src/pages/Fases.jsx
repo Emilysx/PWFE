@@ -2,6 +2,9 @@ import { useState, useMemo } from "react"
 import questoes from "../../public/data/perguntas.json"
 import CaixaQuestoes from "../componntes/CaixaQuestoes.jsx"
 import GridIcon from "../componntes/GridIcon.jsx"
+import "./Fases.css"
+import "../index.css"
+
 
 
 
@@ -35,11 +38,11 @@ export default function Fases(){
     return(
         <main className='app'>
             <header>
-                <h1>Moranguinho</h1>
+                <h1>Senai Burguer</h1>
 
                 <section className='progress'>
                 <div 
-                    className = 'progess-bar'
+                    className = 'progress-bar'
                     style = {{width: `${progresso.percent}%`}}
                     role = "progressbar"
                     aria-valuemin = {0}
