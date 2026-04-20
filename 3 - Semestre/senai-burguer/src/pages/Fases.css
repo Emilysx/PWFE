@@ -1,105 +1,69 @@
-.app{
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+.tela-jogo {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg); 
+    overflow-x: hidden;
 }
 
-.progress{
-	position: relative;
-	margin-top: .75rem;
-	height: 13px;
-	background: var(--bg2);
-	border-radius: 90px;
+.cabecalho-jogo {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(218, 255, 253, 0.9); 
 }
 
-.progress-bar{
-	height: 100%;
-	background: var(--secundary);
-	border-radius: 100px;
+.cabecalho-jogo h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #fff;
 }
 
-.iconGrid-container{
-	padding: 1rem;
+.container-barra-progresso {
+    max-width: 350px;
+    margin: 0 auto;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    position: relative;
+    border: 3px solid var(--border-secundary);
+    overflow: hidden;
 }
 
-.icon-grid{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: grid;
-	gap: .75rem;
-	grid-template-columns: repeat(4, minmax(56px, 1fr));
+.barra-preenchida {
+    height: 100%;
+    background-color: #f39213;
+    transition: width 0.5s ease-in-out;
 }
 
-.iconGrid-item{
-	display: flex;
-	justify-content: center;
+.texto-progresso {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 20px;
+    color: #333;
 }
 
-.icon-button{
-	--size:64px;
-	width: var(--size);
-	height: var(--size);
-	border-radius: 50%;
-	border: 2px solid var(--border-secundary);
-	background: var(--bg1);
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
-
-icon-button--locked{
-	width: 100%;
-
-}
-
-.visually-hidden{
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px);
-	white-space: nowrap;
-	border: 0;
-	padding: 0;
-	margin: -1px;
-}
-
-.dialogo{
-	position: fixed;
-	inset: 0;
-	z-index: 50;
-	display: flex;
-	flex-direction: column;
-}
-
-.header-questao{
-	height: 15dvh;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: .5rem;
-	background:var(--text-light);
-}
-
-.questao-fecha{
-	background: transparent;
-	border: 1px solid var(--border-secundary);
-	border-radius: 10px;
-	padding: .5rem .75rem;
-	font-size: .9rem;
-	cursor: pointer;
-	color: var(--text);
-}
-
-.dialog-card{
-	flex: 1 1 auto;
-	overflow: auto;
-	padding: 1rem;
-
-	background-color: var(--bg2);
-	color: var(--text);
-
+.camada-sobreposicao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
 }

@@ -1,77 +1,72 @@
 import { useState, useMemo } from "react"
 import questoes from "../../public/data/perguntas.json"
 import CaixaQuestoes from "../componntes/CaixaQuestoes.jsx"
-import GridIcon from "../componntes/GridIcon.jsx"
+import Mapa from "../componntes/Mapa/Mapa.jsx"
 import "./Fases.css"
 import "../index.css"
 
-
-
-
-export default function Fases(){
-    const [selecionada, setSelec] = useState(null);
+export default function Fases() {
+    const [selecionada, setSelecionada] = useState(null);
     const [unlockedIndex, setUnlockedIndex] = useState(0);
-    const [solvedSet, setSolvedSet] = useState(() => new Set())
+    const [solvedSet, setSolvedSet] = useState(() => new Set());
 
-    const total = questoes.length
+    const total = questoes.length;
 
-    const handleOpen = (perg) => setSelec(perg);
-    const handleClose = () => setSelec(null)
+    // Funções de controle
+    const handleOpen = (perg) => setSelecionada(perg);
+    const handleClose = () => setSelecionada(null);
 
     const progresso = useMemo(() => {
         const solved = solvedSet.size;
-        return{solved, total, percent: Math.round((solved/total) * 100)}
-    }, [solvedSet, total])
+        return { solved, total, percent: Math.round((solved / total) * 100) };
+    }, [solvedSet, total]);
 
     const handleCorrect = (id) => {
         setSolvedSet((prev) => {
             const next = new Set(prev);
-            next.add(id)
+            next.add(id);
             return next;
         });
-        const idx = questoes.findIndex((q) => q.id === id)
-        if(idx > -1 && idx < questoes.length - 1){
-            setUnlockedIndex((prev) => Math.max(prev, idx + 1))
+        const idx = questoes.findIndex((q) => q.id === id);
+        if (idx > -1 && idx < questoes.length - 1) {
+            setUnlockedIndex((prev) => Math.max(prev, idx + 1));
         }
-    }
+    };
 
-    return(
-        <main className='app'>
-            <header>
+    return (
+        <main className='tela-jogo'>
+            <header className="cabecalho-jogo">
                 <h1>Senai Burguer</h1>
-
-                <section className='progress'>
-                <div 
-                    className = 'progress-bar'
-                    style = {{width: `${progresso.percent}%`}}
-                    role = "progressbar"
-                    aria-valuemin = {0}
-                    aria-valuemax = {100}
-                    aria-valuenow = {progresso.percent}
-                    aria-label = {`Progresso: ${progresso.solved} de ${progresso.total} resolvidas`}
-                />
-                <span className='progress-label'>{progresso.solved}/{progresso.total}</span>
-            </section>
+                <div className='container-barra-progresso'>
+                    <div 
+                        className='barra-preenchida'
+                        style={{ width: `${progresso.percent}%` }}
+                    />
+                    <span className='texto-progresso'>
+                        {progresso.solved}/{progresso.total}
+                    </span>
+                </div>
             </header>
 
-
-            <GridIcon 
-                questions={questoes}
-                onOpen={handleOpen}
-                modalOpen={Boolean(selecionada)}
-                unlockedIndex={unlockedIndex}
-                solvedSet={solvedSet}
+            {/* Enviando as informações para o Mapa com os nomes corretos */}
+            <Mapa 
+                questoes={questoes} 
+                aoAbrir={handleOpen} 
+                indiceDesbloqueado={unlockedIndex} 
+                conjuntoResolvido={solvedSet} 
             />
             
             {selecionada && (
-                <CaixaQuestoes 
-                    question={selecionada}
-                    index={questoes.findIndex((q) => q.id === selecionada.id)}
-                    total={total}
-                    onClose={handleClose}
-                    onCorrect={handleCorrect}
-                />
+                <div className="camada-sobreposicao">
+                    <CaixaQuestoes 
+                        question={selecionada}
+                        index={questoes.findIndex((q) => q.id === selecionada.id)}
+                        total={total}
+                        onClose={handleClose}
+                        onCorrect={handleCorrect}
+                    />
+                </div>
             )}
         </main>
-    )
+    );
 }

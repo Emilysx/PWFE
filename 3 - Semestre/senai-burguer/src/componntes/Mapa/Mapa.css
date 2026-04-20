@@ -1,65 +1,99 @@
-.mapa {
-	max-width: 720;
-	margin: 1rem;
-	padding: 12px;
+.container-mapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg); 
+    overflow: hidden;
 }
 
-.mapaContainer {
-	width: 100%;
-	height: 320px;
-	overflow: hidden;
+.fundo-mapa {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../../assets/mapa-mobile.png');
+    width: 100vw;
+    height: 216vw; 
 }
 
-.painel {
-	background-color: rgb(228, 251, 255);
-	border: 1px rgb(212, 230, 245) solid;
-	border-radius: 10px;
-	padding: 1rem;
-	margin-bottom: 12px;
+/* Ajuste para Tablet */
+@media (min-width: 768px) {
+    .fundo-mapa {
+        background-image: url('../../assets/mapa-tablet.png');
+        width: 768px;
+        height: 1024px;
+    }
 }
 
-.painel-topo {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 6px;
+/* Ajuste para Notebook e Desktop */
+@media (min-width: 1024px) {
+    .fundo-mapa {
+        background-image: url('../../assets/mapa-desktop.png');
+        width: 1200px;
+        height: 750px;
+    }
 }
 
-.vazio {
-	color: rgb(0, 11, 59);
+.botao-fase {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+    z-index: 5;
 }
 
-.botao {
-	background: rgb(255, 255, 10);
-	color: rgb(0, 0, 0);
-	border: 0;
-	border-radius: 8px;
-	padding: 6px, 10px;
-	cursor: pointer;
+.botao-fase:hover:not(:disabled) {
+    transform: scale(1.1);
 }
 
-.botao:hover {
-	background: rgb(240, 240, 153);
-	text-decoration: underline;
+.botao-fase:disabled {
+    cursor: not-allowed;
+    filter: grayscale(0.5);
 }
 
-.lista-pontinhos {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.icone-fase {
+    width: 68px; 
+    height: auto;
 }
 
-.pontinhos {
-	display: grid;
-	grid-template-columns: 48px 1fr 130px;
-	gap: 10px;
-	align-items: center;
-	padding: 6px 0;
-	border-top: gray 1px dashed;
+/* --- POSICIONAMENTO DAS FASES --- */
+
+.fase-0 { bottom: 15%; left: 57%; } 
+.fase-1 { bottom: 18%; left: 48%; }
+.fase-2 { bottom: 22%; left: 40%; }
+.fase-3 { bottom: 38%; left: 40%; }
+.fase-4 { bottom: 39%; left: 52%; }
+.fase-5 { bottom: 54%; left: 57%; }
+.fase-6 { bottom: 60%; left: 45%; }
+.fase-7 { bottom: 72%; left: 37%; }
+.fase-8 { bottom: 82%; left: 47%; }
+.fase-9 { bottom: 92%; left: 55%; }
+
+.botao-fase {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    transition: transform 0.2s;
+    z-index: 5;
 }
 
-.dist{
-    text-align: right;
-    color: #112cc2;
-    font-weight: bolder;
+.numero-fase {
+    position: absolute;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.fase-0 .numero-fase {
+    color: #ffffff; 
 }
