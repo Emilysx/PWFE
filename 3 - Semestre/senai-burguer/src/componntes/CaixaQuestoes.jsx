@@ -31,6 +31,8 @@ export default function CaixaQuestoes({ question, index, total, onClose, onCorre
   const [resolvida, setResolvida] = useState(false);
   const idTitulo = useId();
 
+  
+  
   const verificarResposta = (alternativaEscolhida) => {
     if (alternativaEscolhida === question.respostaCorreta) {
       setResolvida(true);

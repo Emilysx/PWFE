@@ -11,66 +11,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    /* Padrão Mobile */
     background-image: url('../../assets/mapa-mobile.png');
     width: 100vw;
     height: 216vw; 
 }
 
-/* Ajuste para Tablet */
-@media (min-width: 768px) {
-    .fundo-mapa {
-        background-image: url('../../assets/mapa-tablet.png');
-        width: 768px;
-        height: 1024px;
-    }
-}
-
-/* Ajuste para Notebook e Desktop */
-@media (min-width: 1024px) {
-    .fundo-mapa {
-        background-image: url('../../assets/mapa-desktop.png');
-        width: 1200px;
-        height: 750px;
-    }
-}
-
-.botao-fase {
-    position: absolute;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: transform 0.2s;
-    z-index: 5;
-}
-
-.botao-fase:hover:not(:disabled) {
-    transform: scale(1.1);
-}
-
-.botao-fase:disabled {
-    cursor: not-allowed;
-    filter: grayscale(0.5);
-}
-
-.icone-fase {
-    width: 68px; 
-    height: auto;
-}
-
-/* --- POSICIONAMENTO DAS FASES --- */
-
-.fase-0 { bottom: 15%; left: 57%; } 
-.fase-1 { bottom: 18%; left: 48%; }
-.fase-2 { bottom: 22%; left: 40%; }
-.fase-3 { bottom: 38%; left: 40%; }
-.fase-4 { bottom: 39%; left: 52%; }
-.fase-5 { bottom: 54%; left: 57%; }
-.fase-6 { bottom: 60%; left: 45%; }
-.fase-7 { bottom: 72%; left: 37%; }
-.fase-8 { bottom: 82%; left: 47%; }
-.fase-9 { bottom: 92%; left: 55%; }
-
+/* --- ESTILO DOS BOTÕES --- */
 .botao-fase {
     position: absolute;
     background: none;
@@ -84,16 +31,85 @@
     z-index: 5;
 }
 
+.icone-fase {
+    width: 12vw; /* Ícone diminui em telas pequenas */
+    max-width: 68px;
+    height: auto;
+}
+
 .numero-fase {
     position: absolute;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     pointer-events: none;
 }
 
-.fase-0 .numero-fase {
-    color: #ffffff; 
+.fundo-mapa {
+    position: relative;
+    background-image: url('../../assets/mapa-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100vw;
+    height: 216vw; 
+}
+
+.icone-fase { 
+    width: 12vw;    
+    max-width: 68px; 
+}
+
+.fase-0 { bottom: 22%; left: 70%; } 
+.fase-1 { bottom: 24%; left: 44%; }
+.fase-2 { bottom: 27%; left: 20%; }
+.fase-3 { bottom: 43%; left: 23%; }
+.fase-4 { bottom: 44%; left: 62%; }
+.fase-5 { bottom: 53%; left: 78%; }
+.fase-6 { bottom: 63%; left: 38%; }
+.fase-7 { bottom: 70%; left: 8%; }
+.fase-8 { bottom: 80%; left: 39%; }
+.fase-9 { bottom: 90%; left: 69%; }
+
+
+@media (min-width: 768px) {
+    .fundo-mapa {
+        background-image: url('../../assets/mapa-tablet.png');
+        width: 768px;
+        height: 1024px;
+    }
+    .icone-fase { width: 68px; }
+
+    .fase-0 { bottom: 21%; left: 62%; } 
+    .fase-1 { bottom: 24%; left: 44%; }
+    .fase-2 { bottom: 28%; left: 27%; }
+    .fase-3 { bottom: 42%; left: 31%; }
+    .fase-4 { bottom: 43%; left: 54%; }
+    .fase-5 { bottom: 54%; left: 66%; }
+    .fase-6 { bottom: 63%; left: 39%; }
+    .fase-7 { bottom: 72%; left: 23%; }
+    .fase-8 { bottom: 82%; left: 43%; }
+    .fase-9 { bottom: 92%; left: 61%; }
+}
+
+
+@media (min-width: 1024px) {
+    .fundo-mapa {
+        background-image: url('../../assets/mapa-desktop.png');
+        width: 1200px;
+        height: 750px;
+    }
+
+    .fase-0 { bottom: 15%; left: 57%; } 
+    .fase-1 { bottom: 18%; left: 48%; }
+    .fase-2 { bottom: 22%; left: 40%; }
+    .fase-3 { bottom: 38%; left: 40%; }
+    .fase-4 { bottom: 39%; left: 52%; }
+    .fase-5 { bottom: 54%; left: 57%; }
+    .fase-6 { bottom: 60%; left: 45%; }
+    .fase-7 { bottom: 72%; left: 37%; }
+    .fase-8 { bottom: 82%; left: 47%; }
+    .fase-9 { bottom: 92%; left: 55%; }
 }
